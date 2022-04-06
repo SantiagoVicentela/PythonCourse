@@ -44,7 +44,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres://localhost/pythoncoder",
+        default="postgres://idtcvgty:MEvzOK0SL8XwA11ATDb_VAu2a5-R6CTk@batyr.db.elephantsql.com/idtcvgty",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True

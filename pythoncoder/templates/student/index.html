@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+
+Content goes here
+<strong style="color:red">{{edad}}</strong>
+
+{% for element in list_test  %}
+</br>
+ <strong style="color:red">{{element}}</strong>
+{%  endfor %}
+
+{% if edad == "99" %}
+ <strong style="color:red">tiene 99</strong>
+ 
+{% endif %}
+
+</body>
+</html>

@@ -15,3 +15,7 @@ class StudentView(TemplateView):
             "list_test" : [1,2,3,4]
         } 
         return render(request,self.template_name,context)
+
+    #import requests 
+    #def post(self,request):
+        #pass 

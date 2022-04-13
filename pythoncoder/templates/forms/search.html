@@ -1,0 +1,26 @@
+{% extends "v2/base.html"  %}
+{% load static %}
+
+{% block conntent %}
+<div style="margin: 20px 0 ; text-align:center">
+
+    <form action='/v2/search/' method='POST'>
+        {% csrf_token %}
+        <input type='number' name="camada" >
+        <input type="submit" value="Enviar">
+    </form>
+    
+    {% if elements%}
+    <h1> Resultados </h1>
+
+        
+        {% for element in elements %}
+            <p>{{ element.name }}</p>
+            <p>{{ element.camada }}</p>
+        {% endfor %}
+
+
+    {% endif %}
+
+</div>
+{% endblock %}

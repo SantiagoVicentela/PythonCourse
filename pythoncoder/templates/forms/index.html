@@ -1,0 +1,23 @@
+{% extends "v2/base.html"  %}
+{% load static %}
+
+{% block content %}
+
+
+ <form action='v2/formulario/' method='POST'>
+  {% csrf_token%}
+
+ <p>
+  
+    Curso: <input  type="text" name="name">
+ </p>
+      
+ <p>
+    Camada: <input type="text" name="camada">
+  </p>
+
+  <input type="submit"  name="Enviar">
+
+ </form>
+
+ {% endblock %}

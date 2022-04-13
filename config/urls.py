@@ -1,3 +1,4 @@
+from argparse import Namespace
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -17,8 +18,10 @@ urlpatterns = [
     # User management
     path("users/", include("pythoncoder.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    
     # Your stuff: custom urls includes go here
     path("student", StudentView.as_view(), name="student"),
+    path("v2/",include("pythoncoder.v2.urls",namespace="v2")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
